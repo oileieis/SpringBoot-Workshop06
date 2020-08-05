@@ -1,19 +1,30 @@
 package com.example.demo;
 
 public class UsersResponse {
-
     private int id;
     private String name;
+    private int age;
 
     public UsersResponse(int id, String name) {
-        this.id = id;
-        this.name = name;
+        this(id, name, 0);
     }
 
-    //POJO (Plain Old Java Object)
+    public UsersResponse(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // POJO (Plain Old Java Object)
     // Getter/Setter methods
-
-
     public int getId() {
         return id;
     }
