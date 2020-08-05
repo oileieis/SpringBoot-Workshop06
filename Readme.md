@@ -6,4 +6,8 @@ Set Java_Home
 
 ## Run in production
 * gradlew bootJar
-* java -jar /path/
+* java -jar /p
+
++ new Repo
++ new User
++ connec db
