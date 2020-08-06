@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,7 @@ public class UserController {
 
         PagingResponse pagingResponse = new PagingResponse(page, itemPerPage);
         List<UsersResponse> usersResponseList = new ArrayList<>();
+        Page<User> usersPagination = userRepository.findAll(PageRequest.of(page-1, itemPerPage));
 
 //        usersResponseList.add(new UsersResponse(1, "user1"));
 //        usersResponseList.add(new UsersResponse(2, "user2"));
